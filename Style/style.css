@@ -1,0 +1,32 @@
+body{
+  background: grey;
+}
+#nav{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+#contenido{
+  padding-top: 3%
+}
+h2{
+  color: white;
+}
+p{
+  color:white;
+}
+label{
+  color: white;
+}
+
+input{
+  width: 50px;
+}
+
+
+   @media (max-width: 768px) {
+     
+
+}

@@ -1,0 +1,82 @@
+body{
+  background-image: url("Fondo.jpg");
+  background-size: 400px 1000px;
+  background-repeat: repeat;
+}
+.titulo{
+  font-size: 50px;
+  text-align: center;
+  font-weight: bold;
+  padding-top: 10px
+}
+#volver {
+  margin: 5px;
+}
+/* Estilos para pantallas de PC */
+#nombre, #correo, #telefono {
+    width: 99%;
+}
+
+#tp_documento, #n_documento {
+    width: 98%;
+}
+
+.tabla {
+    margin: 0 auto;
+}
+
+#boton1, #boton2 {
+    width: 90%;
+}
+input{
+  text-align: center;
+  background-color: transparent;
+}
+select{
+  background-color: transparent;
+}
+.genpdf{
+      text-align: center;
+      padding: 10px;
+}
+
+
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+    #nombre, #correo, #telefono {
+        width: 100%;
+    }
+
+    #tp_documento, #n_documento {
+        width: 100%;
+    }
+
+    .tabla {
+        width: 100%;
+    }
+
+    #boton1, #boton2 {
+        width: 100%;
+    }
+    
+    #volver {
+      margin:  5px;
+    }
+    body{
+    background-image: url("Fondo.jpg");
+    background-size: 400px 1000px;
+    background-repeat: repeat;
+    }
+    .titulo{
+    font-size: 30px;
+    text-align: center;
+      padding-top: 30px
+    }
+    
+    .genpdf{
+      text-align: center;
+      padding: 10px;
+}
+    
+}

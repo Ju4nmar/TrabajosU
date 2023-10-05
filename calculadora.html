@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+    <title>Curriculum</title>
+    <link rel="stylesheet" href="Style/style-calc.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <!--biblioteca para generar pdf-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-beta4/html2canvas.min.js"></script>
+</head>
+
+<body>
+  <a href="index.html" class="btn btn-primary" id="volver">Curriculum</a>
+
+    <div class="container mt-1" id="contenido">
+
+      <p class="titulo">Calculadora de Salario</p>
+        <table class="tabla" id="tabla">
+
+            <tr>
+                <td colspan="2"><input type="text" id="nombre" placeholder="Nombres y Apellidos"></td>
+            </tr>
+
+            <tr>
+                <td><select id="tp_documento">
+                        <option value="-1" selected>T. Documento</option>
+                        <option value="Cedula de Ciudadania">Cedula de Ciudadania</option>
+                        <option value="Cedula de Extranjeria">Cedula de Extranjeria</option>
+                        <option value="Targeta de Identidad">Targeta de Identidad</option>
+                        <option value="Pasaporte">Pasaporte</option>
+                    </select></td>
+                <td><input type="number" id="n_documento" placeholder="Numero de Documento"></td>
+            </tr>
+
+            <tr>
+                <td colspan="2"><input type="email" id="correo" placeholder="Correo Electronico"></td>
+            </tr>
+
+            <tr>
+                <td colspan="2"><input type="number" id="telefono" placeholder="Numero de Telefono"></td>
+            </tr>
+          
+
+            <tr>
+                <th>Turnos</th>
+                <th>Turnos realizados</th>
+            </tr>
+
+            <tr>
+                <td><label>Turno 1</label></td>
+                <td><input type="number" id="turno1"></td>
+            </tr>
+
+            <tr>
+                <td><label>Turno 2</label></td>
+                <td><input type="number" id="turno2"></td>
+            </tr>
+
+            <tr>
+                <td><label>Turno 3</label></td>
+                <td><input type="number" id="turno3"></td>
+            </tr>
+
+            <tr>
+                <td><label>Turno 4</label></td>
+                <td><input type="number" id="turno4"></td>
+            </tr>
+
+            <tr>
+                <td><label>Turno 5</label></td>
+                <td><input type="number" id="turno5"></td>
+            </tr>
+
+            <tr>
+                <td><label>Descanso</label></td>
+                <td><input type="number" id="descanso"></td>
+            </tr>
+
+            <tr>
+                <td>
+                    <select id="transporte">
+                        <option>Aux. Transporte</option>
+                        <option value="1">Auxilio Quincenal</option>
+                        <option value="2">Auxilio Mensual</option>
+                    </select>
+                </td>
+                <td><input type="number" id="transporteValue" placeholder="Aux. Transporte" readonly></td>
+            </tr>
+
+            <tr>
+                <td><input type="button" value="CALCULAR" id="boton1" class="btn btn-primary" onclick="calcular()"></td>
+                <td><input type="button" value="LIMPIAR" id="boton2" class="btn btn-primary" onclick="limpiar()"></td>
+            </tr>
+
+            <tr>
+                <td><label>INGRESOS</label></td>
+
+                <td><input type="number" id="tot_ingreso" readonly></td>
+            </tr>
+            <tr>
+                <td>Salud y Pension</td>
+                <td><input type="number" id="salud" readonly></td>
+            </tr>
+            <tr>
+                <td>Otros Descuentos</td>
+                <td><input type="number" id="o_desc" placeholder="Ingresa un valor"></td>
+            </tr>
+            <tr>
+                <td><label>DEDUCCIONES</label></td>
+                <td><input type="number" id="tot_descuento" readonly></td>
+            </tr>
+
+            <tr>
+                <td>TOTAL</td>
+
+                <td><input type="number" id="resultado" readonly></td>
+            </tr>
+
+        </table>
+      
+      <div class="genpdf">
+        <input type="button" value="GENERAR INFORMACION" id="boton4" class="btn btn-primary" onclick="generar()">
+      </div>
+    </div>
+
+    <script src="Script/script-calc.js"></script>
+</body>
+
+</html>
